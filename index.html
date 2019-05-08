@@ -16,6 +16,17 @@ var map = new mapboxgl.Map({
 container: 'map',
 style: 'mapbox://styles/kaorikowada/cjvess4i2cyd51fqxubfywgqi'
 });
+  // Navigation Control
+map.addControl(
+ new mapboxgl.NavigationControl(), 'top-left'
+);
+// Geolocation Control
+map.addControl(new mapboxgl.GeolocateControl({
+  positionOptions: {
+    enableHighAccuracy: true
+  },
+  trackUserLocation: true
+}));
 </script>
   </body>
 </html>
